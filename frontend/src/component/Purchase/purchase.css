@@ -1,0 +1,119 @@
+.purchase-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  padding: 20px;
+}
+
+/* Box */
+.purchase-box {
+  background: #fff;
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.purchase-box h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Product summary */
+.product-summary {
+  margin-bottom: 20px;
+}
+
+.product-summary img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-summary h3 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.product-summary p {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Form inputs */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Error text */
+form span {
+  color: red;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/* Cancel button */
+.back-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .purchase-box {
+    padding: 20px;
+  }
+}

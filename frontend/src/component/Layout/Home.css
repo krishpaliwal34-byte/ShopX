@@ -1,0 +1,55 @@
+.home-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.home-container h1 {
+  margin-bottom: 20px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 60px;
+}
+
+
+.brand-card {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.brand-card img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.brand-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 15px;
+  }
+
+  .brand-card {
+    padding: 15px;
+  }
+
+  .brand-card img {
+    width: 60px;
+    height: 60px;
+  }
+}

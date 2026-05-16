@@ -1,0 +1,66 @@
+.Signup-conatiner h2,
+.Login-conatiner h2 {
+  position: absolute;
+  top: 120px;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.Signup-conatiner , .Login-conatiner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px black;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+form span {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0e24ec;
+  transition: 0.5m;
+}
