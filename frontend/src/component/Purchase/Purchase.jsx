@@ -16,7 +16,6 @@ const Purchase = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // ✅ FIX: useForm properly use kiya
   const {
     register,
     handleSubmit,
@@ -24,7 +23,6 @@ const Purchase = () => {
     reset,
   } = useForm();
 
-  // ✅ All products combined
   const allProducts = [
     ...adidasProducts,
     ...hmProducts,
@@ -36,19 +34,18 @@ const Purchase = () => {
     ...zudioProducts,
   ];
 
-  // ✅ FIX: strict equality
+ 
   const product = allProducts.find((item) => item.id === id);
 
-  // ✅ Safety check
   if (!product) {
     return <h2 style={{ textAlign: "center" }}>Product Not Found</h2>;
   }
 
-  // ✅ FIX: correct function name
+  
   const onSubmit = async (data) => {
     try {
       const res = await axios.post(
-        "http://localhost:2000/api/order/purchase",
+        "https://shopx-4rit.onrender.com/api/order/purchase",
         {
           productId: product.id,
           productName: product.name,
@@ -72,14 +69,13 @@ const Purchase = () => {
       <div className="purchase-box">
         <h2>Checkout</h2>
 
-        {/* ✅ Product Summary */}
         <div className="product-summary">
           <img src={product.image} alt={product.name} />
-          <h3>{product.name}</h3> {/* FIX: title -> name */}
+          <h3>{product.name}</h3>
           <p>Price: ₹{product.price}</p>
         </div>
 
-        {/* ✅ Form */}
+    
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"

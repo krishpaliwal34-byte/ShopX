@@ -86,7 +86,7 @@
 }
 .mobile-menu {
   position: absolute;
-  top: 70px;
+  top: 80px;
   right: 0;
   width: 200px;
   background: #222;
@@ -124,5 +124,18 @@
 
   .menu-icon {
     display: block;
+  }
+}
+@media (max-width: 386px) {
+  .mobile-menu{
+     right: 0;
+     margin-left: 10vw;
+  }
+  .search-box input{
+    width: 120px;
+  }
+  .logo{
+    font-size: 13px;
+    margin-right: 20px;
   }
 }

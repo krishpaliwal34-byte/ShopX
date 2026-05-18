@@ -16,7 +16,7 @@ const Signup = () => {
       const onsubmit = async (data) =>{
       try{
        const res =  await axios.post(
-          "http://localhost:2000/api/user/signup",
+          "https://shopx-4rit.onrender.com/api/user/signup",
           {
             email: data.email,
             password: data.password

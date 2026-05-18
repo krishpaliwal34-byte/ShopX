@@ -17,21 +17,20 @@ const Login = () => {
       const onsubmit = async (data) => {
   try {
     const res = await axios.post(
-      "http://localhost:2000/api/user/login",
+      "https://shopx-4rit.onrender.com/api/user/login",
       {
         email: data.email,
         password: data.password,
       }
     );
 
-    // ✅ IMPORTANT FIX
     localStorage.setItem("token", res.data.token);
     localStorage.setItem("email", res.data.email);
 
     alert("Login Success");
 
     navigate("/");
-    window.location.reload(); // optional
+    window.location.reload();
 
   } catch (error) {
     alert(error.response?.data?.msg);
