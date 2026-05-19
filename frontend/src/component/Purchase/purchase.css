@@ -1,119 +1,192 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .purchase-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  background: linear-gradient(135deg, #f5f7fa, #e9f1ff);
   padding: 20px;
 }
 
-/* Box */
 .purchase-box {
-  background: #fff;
-  padding: 25px;
   width: 100%;
-  max-width: 420px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 430px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
   text-align: center;
+  transition: 0.3s ease;
 }
 
-/* Heading */
 .purchase-box h2 {
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 22px;
 }
 
-/* Product summary */
+
 .product-summary {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .product-summary img {
   width: 100%;
-  max-height: 200px;
+  height: 240px;
   object-fit: contain;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-radius: 16px;
+  background: #f8f8f8;
+  padding: 10px;
 }
 
 .product-summary h3 {
-  margin: 5px 0;
+  margin-top: 14px;
+  font-size: 22px;
   color: #222;
 }
 
 .product-summary p {
-  color: #555;
-  font-weight: 500;
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
 }
 
-/* Form inputs */
 form input,
 form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  width: 98%;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
   outline: none;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 15px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  resize: none;
+  box-sizing: border-box;
 }
 
-/* Focus effect */
 form input:focus,
 form textarea:focus {
   border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.12);
 }
 
-/* Error text */
 form span {
-  color: red;
+  color: #e63946;
   font-size: 12px;
   display: block;
   text-align: left;
-  margin-bottom: 5px;
+  margin-top: 4px;
+  margin-left: 4px;
 }
 
-/* Submit button */
-form button {
+form button,
+.back-btn {
   width: 100%;
-  padding: 12px;
-  background: #007bff;
-  color: white;
+  padding: 14px;
+  margin-top: 16px;
   border: none;
-  border-radius: 10px;
-  margin-top: 10px;
-  cursor: pointer;
+  border-radius: 14px;
+  font-size: 15px;
   font-weight: 600;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
 }
 
 form button:hover {
-  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 123, 255, 0.25);
 }
 
-/* Cancel button */
+
 .back-btn {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background: #eee;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+  background: #f1f1f1;
+  color: #333;
 }
 
 .back-btn:hover {
-  background: #ddd;
+  background: #e4e4e4;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .purchase-box {
-    padding: 20px;
+    max-width: 100%;
+    padding: 19px;
+  }
+
+  .product-summary img {
+    height: 210px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .purchase-container {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .purchase-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .purchase-box h2 {
+    font-size: 24px;
+  }
+
+  .product-summary img {
+    height: 180px;
+    padding: 6px;
+  }
+
+  .product-summary h3 {
+    font-size: 18px;
+  }
+
+  .product-summary p {
+    font-size: 16px;
+  }
+
+  form input,
+  form textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  form button,
+  .back-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+  .purchase-box {
+    padding: 14px;
+  }
+
+  .purchase-box h2 {
+    font-size: 20px;
+  }
+
+  .product-summary img {
+    height: 150px;
   }
 }
